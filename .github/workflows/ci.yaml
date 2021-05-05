@@ -1,4 +1,4 @@
-name: CI
+name: markdownlint
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      
+      - name: Check out code
+        uses: actions/checkout@v2  
       - name: Lint Markdown
-        uses: tomwhross/write-good-action@v1.2
+        uses: actionshub/markdownlint@main
